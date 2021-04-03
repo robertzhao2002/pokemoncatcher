@@ -1,7 +1,7 @@
 import pokebase as pb
 import math as ma
 
-#Assume IVs are all 16, EVs are all 81
+#Assume IVs are all 16, EVs are all 81 [AVERAGE VALUES]
 
 IV = 16
 

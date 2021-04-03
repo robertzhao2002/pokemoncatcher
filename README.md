@@ -12,3 +12,4 @@ It outputs the probability of catching that pokemon with those given parameters,
 
 
 ### sim_catch.py [WIP]
+This is a Python 3 program that simulates catching a pokemon with user-input and writes each simulation result to a csv file.
