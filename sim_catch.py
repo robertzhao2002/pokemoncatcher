@@ -10,19 +10,23 @@ import pokemon_stat as stats
 pokedex_no = randint(1,600)
 pokemon_name = stats.get_pokemon(pokedex_no)
 print('Pokemon:', pokemon_name)
+
 IV = stats.RAND_IVS
 EV = stats.rand_EVs()
 print('IVs:', IV)
 print('EVs:', EV)
+
 BALL = 'pokeball'
 STATUS = 'fs'
-HP = '1p'
+
 LEVEL = randint(1, 100)
 print('Level:', LEVEL)
 
-#Constants
+h_or_p = random()
 base_hp = stats.get_base(pokemon_name, 'hp')
 total_hp = stats.get_hp(base_hp, LEVEL, IV[0], EV[0])
+HP = (str(random()*100) + 'p') if h_or_p < 0.5 else (str(random()*total_hp) + 'h')
+
 HP_VAL = str(float(HP[0:-1]) * total_hp/100) if (HP[-1] == 'p') else HP[0:-1]
 
 try:
