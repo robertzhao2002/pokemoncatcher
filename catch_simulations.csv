@@ -2,3 +2,7 @@ pokedex_number,pokemon_name,pokemon_lvl,iv,ev,hp,total_pokemon_hp,ball,status,ca
 150,mewtwo,92,4,7,1,301,pokeball,fs,0.0293,11
 150,mewtwo,80,12,116,2.92,292,pokeball,fs,0.0292,1
 5,charmeleon,1,8,86,0.12,12,pokeball,fs,0.4382,2
+84,doduo,99,26,90,2.25,225,pokeball,fs,1.8503,1
+24,arbok,1,5,94,0.12,12,pokeball,fs,0.8765,1
+22,fearow,92,4,3,2.25,225,pokeball,fs,0.8765,1
+295,exploud,10,20,191,0.47,47,pokeball,fs,0.4382,1
