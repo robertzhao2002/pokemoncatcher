@@ -16,29 +16,28 @@ EV = stats.rand_EVs()
 print('IVs:', IV)
 print('EVs:', EV)
 
-BALL = 'pokeball'
+BALL_DICT = {'0': 'pokeball', '1': 'great ball', '2': 'ultra ball'}
+BALL = BALL_DICT[str(randint(0,2))] #Random pokeball
 
 STATUS_DICT = {'0': 'none', '1': 'pbp', '2': 'fs'} 
-STATUS = STATUS_DICT[str(randint(0,2))]
+STATUS = STATUS_DICT[str(randint(0,2))] #Random status
 
-LEVEL = randint(1, 100)
+LEVEL = randint(1, 100) #Random Level
 print('Level:', LEVEL)
 
 h_or_p = random()
 base_hp = stats.get_base(pokemon_name, 'hp')
 total_hp = stats.get_hp(base_hp, LEVEL, IV[0], EV[0])
-HP = (str(random()*100) + 'p') if h_or_p < 0.5 else (str(random()*total_hp) + 'h')
+HP = (str(random()*100) + 'p') if h_or_p < 0.5 else (str(random()*total_hp) + 'h') #Random HP values
 
-HP_VAL = str(float(HP[0:-1]) * total_hp/100) if (HP[-1] == 'p') else HP[0:-1]
+HP_VAL = str(float(HP[0:-1]) * total_hp/100) if (HP[-1] == 'p') else HP[0:-1] #Value to be stored in CSV
 
 try:
     #simulate
     prob = catch_prob(IV, EV, BALL, STATUS, HP, LEVEL, pokemon_name)
     print('Catch probability:', prob)
     balls_thrown = 1
-    r = random()
-    while(r > prob):
-        r = random()
+    while(random() > prob):
         balls_thrown+=1
     print('Balls thrown:', str(balls_thrown))
 
