@@ -34,8 +34,6 @@ def get_hp(base_hp, level, iv=16, ev=85):
     assert ev >= 0 and ev <= 252
     return ma.floor((2*base_hp+iv+(ev//4))*level/100)+level+10
 
-
-
 #Attack
 #Defense
 #Sp. Attack

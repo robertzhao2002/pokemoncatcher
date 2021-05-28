@@ -11,7 +11,7 @@ EV = (85, 85, 85, 85, 85, 85) #Average EVs
 
 BALLS = {'pokeball': 1, 'great ball': 1.5, 'ultra ball': 2}
 
-STATUS = {'pbp': [1.5, 'poisoned/burned/paralyzed'], 'fs': [2.5, 'frozen/asleep']} #1.5x for poison/burn/paralysis, 2.5x for frozen/asleep
+STATUS = {'none': [1, 'no status'], 'pbp': [1.5, 'poisoned/burned/paralyzed'], 'fs': [2.5, 'frozen/asleep']} #1.5x for poison/burn/paralysis, 2.5x for frozen/asleep
 
 #Returns the catch probability.
 #Input: iv and ev are both tuples of length 6 (HP, ATK, DEF, SP. ATK, SP. DEF, SPD)
@@ -45,12 +45,14 @@ def catch_prob(iv, ev, ball, status, hp, level, pokemon_name):
     
     if hp_type == 'p': hp = hp*hp_level/100 #If percentage, convert to HP
     catch_value = (((3*hp_level-2*hp)*catch_rate*BALLS[ball])/(3*hp_level))*STATUS[status][0]
-    catch_prob = catch_value/255
 
+    catch_prob = (65536)/((255/catch_value)**0.1875)
     # print(catch_rate)
     # print(base_hp)
     # print(hp_level)
 
-    return catch_prob
+    return (catch_prob/65536)**4
+
+print(catch_prob((16, 16), (85, 16), 'pokeball', 'none', '100p', 50, 'mewtwo'))
 
 
