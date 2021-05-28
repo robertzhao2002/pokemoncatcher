@@ -1,5 +1,3 @@
-#Calculates the stats of pokemon (hp, attack, defense, special attack, special defense, speed) based on the Bulbapedia formula
-
 import math as ma
 import pokebase as pb
 from random import randint, shuffle

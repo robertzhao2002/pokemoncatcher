@@ -17,7 +17,9 @@ print('IVs:', IV)
 print('EVs:', EV)
 
 BALL = 'pokeball'
-STATUS = 'fs'
+
+STATUS_DICT = {'0': 'none', '1': 'pbp', '2': 'fs'} 
+STATUS = STATUS_DICT[str(randint(0,2))]
 
 LEVEL = randint(1, 100)
 print('Level:', LEVEL)

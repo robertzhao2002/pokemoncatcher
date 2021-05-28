@@ -53,6 +53,6 @@ def catch_prob(iv, ev, ball, status, hp, level, pokemon_name):
 
     return (catch_prob/65536)**4
 
-print(catch_prob((16, 16), (85, 16), 'pokeball', 'none', '100p', 50, 'mewtwo'))
+#print(catch_prob((16, 16), (85, 16), 'pokeball', 'none', '100p', 50, 'mewtwo'))
 
 
