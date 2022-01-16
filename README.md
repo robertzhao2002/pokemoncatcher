@@ -1,10 +1,10 @@
 # Pokemon Catcher Simulator
 
-### list_operators.py [WIP]
+### list_operators.py 
 This is a Python 3 module that contains many helper functions for lists and tuples.
 
-### pokemon_stat.py [WIP]
-This is a Python 3 module that contains many helper functions for pokemon stats.
+### pokemon_stat.py 
+This is a Python 3 module that contains many helper functions for pokemon stats. It includes calculators for base stats, as well as a function to determine the optimal nature for a pokemon, which takes into account their best and worst base-stats.
 
 ### prob_catch.py
 This is a Python 3 program that calculates the probability of catching a pokemon with user-input
